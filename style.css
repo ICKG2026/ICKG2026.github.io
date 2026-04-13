@@ -198,3 +198,23 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
     .container { flex-direction: column; }
     .sidebar { order: 1; /* Sidebar comes after content on mobile */ }
 }
+
+/* Submission Button Style */
+.submit-button {
+    display: inline-block;
+    background-color: #e74c3c; /* Red accent color */
+    color: white !important;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.submit-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
