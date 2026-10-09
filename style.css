@@ -132,6 +132,13 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
 .organizer-logo-link:hover { transform: scale(1.05); border-color: var(--primary-color); }
 .organizer-img { height: 60px; width: auto; display: block; }
 
+.sponsor-section { margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px; }
+.sponsor-section h3 { margin: 0 0 20px; color: #555; }
+.sponsor-logos { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
+.sponsor-logo-link { display: flex; align-items: center; justify-content: center; min-height: 80px; padding: 10px 14px; border: 1px solid #ddd; border-radius: 5px; background: white; transition: transform 0.2s, border-color 0.2s; }
+.sponsor-logo-link:hover { transform: scale(1.03); border-color: var(--primary-color); }
+.sponsor-img { display: block; width: auto; max-width: 100%; max-height: 70px; object-fit: contain; }
+
 /* COMMITTEE MEMBER STYLES */
 .committee-group { margin-bottom: 40px; }
 .committee-role-title { 
@@ -197,24 +204,4 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
     
     .container { flex-direction: column; }
     .sidebar { order: 1; /* Sidebar comes after content on mobile */ }
-}
-
-/* Submission Button Style */
-.submit-button {
-    display: inline-block;
-    background-color: #e74c3c; /* Red accent color */
-    color: white !important;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.submit-button:hover {
-    background-color: #c0392b; /* Darker red on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
