@@ -161,6 +161,57 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
 .member-name:hover { text-decoration: underline; }
 .member-affil { font-size: 0.95rem; color: #555; font-style: italic; }
 
+/* KEYNOTE SPEAKER STYLES */
+.keynote-card {
+    position: relative; margin-top: 30px; padding: 30px;
+    background: white; border: 1px solid #e2e8f0; border-top: 5px solid var(--primary-color);
+    border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+.keynote-date {
+    display: inline-block; margin-bottom: 24px; padding: 7px 14px;
+    color: white; background: var(--primary-color); border-radius: 4px;
+    font-size: 0.95rem; font-weight: 700;
+}
+.keynote-profile { display: flex; align-items: center; gap: 30px; }
+.keynote-photo {
+    display: block; width: 190px; height: 190px; object-fit: cover;
+    border: 4px solid #eef3f8; border-radius: 10px;
+}
+.keynote-details h3 { margin: 0 0 8px; font-size: 1.8rem; }
+.keynote-details h3 a { color: var(--primary-color); text-decoration: none; }
+.keynote-details h3 a:hover { text-decoration: underline; }
+.keynote-role { margin: 0 0 6px; color: #333; font-size: 1.1rem; font-weight: 700; }
+.keynote-affiliation { margin: 0 0 12px; color: #555; line-height: 1.6; }
+.keynote-honors { margin: 0; color: var(--secondary-color); font-weight: 600; }
+.keynote-bio { margin-top: 28px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.keynote-bio h3 { margin-top: 0; color: var(--primary-color); }
+.keynote-bio p { line-height: 1.7; }
+
+/* PROGRAM OVERVIEW STYLES */
+.program-table-wrap { margin: 28px 0 36px; overflow-x: auto; }
+.program-table {
+    width: 100%; min-width: 650px; border-collapse: collapse;
+    color: #111; background: white; text-align: center;
+    border: 2px solid #222;
+}
+.program-table caption {
+    padding: 10px 12px; border: 2px solid #222; border-bottom: 0;
+    background: #d6d6d6; color: #111; font-size: 1.25rem; font-weight: 700;
+}
+.program-table th,
+.program-table td { padding: 9px 12px; border: 2px solid #222; font-size: 1.05rem; }
+.program-table thead th { background: #d6d6d6; font-weight: 700; }
+.program-table th:first-child,
+.program-table td:first-child { width: 22%; white-space: nowrap; }
+.program-table th:nth-child(2),
+.program-table td:nth-child(2) { width: 16%; }
+.program-table th:nth-child(3),
+.program-table td:nth-child(3) { width: 62%; }
+.program-table tr.program-ceremony td:last-child { background: #f5c9a8; }
+.program-table tr.program-keynote td:last-child { background: #afc2e5; font-weight: 600; }
+.program-table tr.program-session td:last-child { background: #d1dcf0; }
+.program-table tr.program-social td:last-child { background: #ffe79a; }
+
 
 /* --- MOBILE RESPONSIVE STYLES --- */
 @media (max-width: 768px) {
@@ -204,4 +255,13 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
     
     .container { flex-direction: column; }
     .sidebar { order: 1; /* Sidebar comes after content on mobile */ }
+
+    .keynote-card { padding: 22px; }
+    .keynote-profile { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .keynote-photo { width: 160px; height: 160px; }
+
+    .program-table-wrap { margin-left: -4px; margin-right: -4px; }
+    .program-table caption { font-size: 1.1rem; }
+    .program-table th,
+    .program-table td { padding: 8px 10px; font-size: 0.98rem; }
 }
