@@ -183,6 +183,11 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
 .keynote-role { margin: 0 0 6px; color: #333; font-size: 1.1rem; font-weight: 700; }
 .keynote-affiliation { margin: 0 0 12px; color: #555; line-height: 1.6; }
 .keynote-honors { margin: 0; color: var(--secondary-color); font-weight: 600; }
+.keynote-talk { margin-top: 28px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.keynote-talk h3 { margin: 22px 0 10px; color: var(--primary-color); }
+.keynote-talk h3:first-child { margin-top: 0; }
+.keynote-talk p { line-height: 1.7; }
+.keynote-talk-title { margin-top: 0; color: #222; font-size: 1.25rem; font-weight: 700; }
 .keynote-bio { margin-top: 28px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
 .keynote-bio h3 { margin-top: 0; color: var(--primary-color); }
 .keynote-bio p { line-height: 1.7; }
@@ -211,6 +216,68 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
 .program-table tr.program-keynote td:last-child { background: #afc2e5; font-weight: 600; }
 .program-table tr.program-session td:last-child { background: #d1dcf0; }
 .program-table tr.program-social td:last-child { background: #ffe79a; }
+.program-table a { color: #123d7a; text-decoration: none; }
+.program-table a:hover { text-decoration: underline; }
+.program-detail { display: inline-block; margin-top: 2px; font-size: 0.92rem; line-height: 1.35; }
+
+/* TECHNICAL PROGRAM STYLES */
+.schedule-note {
+    margin: 22px 0; padding: 16px 18px; line-height: 1.65;
+    background: #f3f6fa; border-left: 5px solid var(--primary-color); border-radius: 4px;
+}
+.schedule-day-nav {
+    position: static; display: flex; gap: 12px; margin: 0 0 32px; padding: 0;
+    background: transparent; box-shadow: none;
+}
+.schedule-day-nav a {
+    display: inline-block; padding: 9px 16px; color: var(--primary-color);
+    background: white; border: 1px solid var(--primary-color); border-radius: 4px;
+    font-size: 0.95rem; font-weight: 700; text-decoration: none;
+}
+.schedule-day-nav a:hover { color: white; background: var(--primary-color); }
+.schedule-day { margin-top: 36px; scroll-margin-top: 80px; }
+.schedule-day > h3 {
+    margin: 0 0 22px; padding: 12px 18px; color: white;
+    background: var(--primary-color); border-radius: 5px; font-size: 1.35rem;
+}
+.technical-session {
+    margin-bottom: 32px; overflow: hidden;
+    border: 1px solid #d8e0ea; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.session-heading {
+    display: flex; justify-content: space-between; gap: 24px; align-items: flex-start;
+    padding: 18px 20px; background: #e8eff9; border-bottom: 1px solid #ccd8e8;
+}
+.session-number {
+    display: inline-block; margin-bottom: 5px; color: var(--primary-color);
+    font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.session-heading h4 { margin: 0; color: #1e293b; font-size: 1.18rem; line-height: 1.4; }
+.session-meta {
+    display: flex; flex-direction: column; min-width: 145px; color: #34495e;
+    font-size: 0.9rem; font-weight: 600; line-height: 1.55; text-align: right;
+}
+.paper-list { margin: 0; padding: 0; list-style: none; }
+.paper-item {
+    display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 18px;
+    padding: 16px 20px; border-bottom: 1px solid #e5e9ef;
+}
+.paper-item:last-child { border-bottom: 0; }
+.paper-item.remote { background: #fff6e8; }
+.paper-time { color: #334155; font-size: 0.94rem; font-weight: 700; white-space: nowrap; }
+.paper-title { color: #172033; font-weight: 700; line-height: 1.45; }
+.paper-id {
+    display: inline-block; margin-right: 6px; padding: 1px 7px;
+    color: white; background: #596b82; border-radius: 3px; font-size: 0.78rem;
+    vertical-align: 1px;
+}
+.paper-authors { margin-top: 6px; color: #5b6573; font-size: 0.92rem; line-height: 1.5; }
+.remote-badge {
+    display: inline-block; margin-left: 7px; padding: 2px 8px;
+    color: #8a2c0d; background: #ffd9c7; border: 1px solid #f0a27f;
+    border-radius: 999px; font-size: 0.76rem; font-weight: 800; text-transform: uppercase;
+    vertical-align: 1px;
+}
 
 
 /* --- MOBILE RESPONSIVE STYLES --- */
@@ -264,4 +331,11 @@ footer { background: #2c3e50; color: #ccc; text-align: center; padding: 30px 20p
     .program-table caption { font-size: 1.1rem; }
     .program-table th,
     .program-table td { padding: 8px 10px; font-size: 0.98rem; }
+
+    .schedule-day-nav { flex-direction: column; }
+    .schedule-day-nav a { text-align: center; }
+    .session-heading { flex-direction: column; gap: 10px; }
+    .session-meta { min-width: 0; text-align: left; }
+    .paper-item { grid-template-columns: 1fr; gap: 6px; padding: 15px 16px; }
+    .paper-time { color: var(--primary-color); }
 }
